@@ -13,7 +13,7 @@ class App extends React.Component {
     };
   }
   componentDidMount() {
-    axios.get("http://localhost:8080/api/").then((res) => {
+    axios.get("http://mytodo-app.azurewebsites.net/api/").then((res) => {
       this.setState({
         tasks: res.data,
         id: 0,
@@ -26,7 +26,7 @@ class App extends React.Component {
     console.log(id);
     event.preventDefault();
     axios
-      .post("http://localhost:8080/api/", {
+      .post("http://mytodo-app.azurewebsites.net/api/", {
         task: this.state.task, //adding new task
         status: "created",
       })
@@ -36,14 +36,14 @@ class App extends React.Component {
   }
 
   delete(id) {
-    axios.delete("http://localhost:8080/api/" + id).then(() => {
+    axios.delete("http://mytodo-app.azurewebsites.net/api/" + id).then(() => {
       this.componentDidMount(); //deleting a completed task
     });
   }
 
   edit(id) {
     console.log(id)
-    axios.put("http://localhost:8080/api/" + id).then(() => {
+    axios.put("http://mytodo-app.azurewebsites.net/api/" + id).then(() => {
       this.setState({
         status: "completed", //editing status of the task
       });      

@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "homepage": "https://github.com/muhammadali1405/todo-frontend/",
+  "homepage": "https://muhammadali1405.github.io/todo-frontend/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d master -d build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

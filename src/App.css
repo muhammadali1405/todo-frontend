@@ -1,0 +1,105 @@
+.main {
+  background: rgb(255, 255, 255);
+  margin: auto;
+  width: 350px;
+  height: 100vh;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+.top-bar{
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  margin: 30px 0 0 8px ;
+}
+.top-title{
+  font-size: 12px;
+  font-weight: 400;
+}
+.bottom-title{
+  padding: 5px 0 0 18px;
+  font-weight: 500;
+}
+.close-icon{
+  margin:40px 30px 0 0;
+}
+.add-task{
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.add-icon{
+  padding-left:2rem;  
+  display: flex;  
+  flex-direction: row-reverse;
+}
+.submit-button{
+  color: rgb(48, 48, 252);
+  background: none;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  font-size: 16px;
+}
+.delete-button{
+  color: rgb(48, 48, 252);
+  background: none;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  font-size: 16px;
+  padding-right:20px;
+}
+.edit-button{
+  color: rgb(48, 48, 252);
+  background: none;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  font-size: 16px;
+}
+.listing{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.three-dots{
+  padding-right:30px;
+}
+.input-box{
+  border:none;
+}
+.tasks-view{
+  margin-top: 1.5rem;
+}
+.tasks-list{
+  width: 100%;
+  display: flex;
+}
+.checkbox{    
+margin-left:2rem; 
+margin-top: 1rem;   
+color: rgb(48, 48, 252);  
+}
+.task-name{
+  margin-left:1rem;
+  margin-top:1rem;
+  text-align: left;
+}
+.seperation{
+  margin-left: 4rem;
+  margin-top: 1rem;
+}
+.done{
+  text-decoration: line-through;
+}

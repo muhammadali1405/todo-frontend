@@ -1,56 +1,24 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
+task-management-app
+Dependencies:
 
-name: Build and deploy Node.js app to Azure Web App - todoapp-demo
+    Node npm
 
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
+Steps:
 
-jobs:
-  build:
-    runs-on: windows-latest
+First of all Clone the project
 
-    steps:
-    - uses: actions/checkout@v2
+    git clone https://github.com/muhammadali1405/todo-frontend.git
 
-    - name: Set up Node.js version
-      uses: actions/setup-node@v1
-      with:
-        node-version: '14.x'
+then
 
-    - name: npm install, build, and test
-      run: |
+    cd todo-frontend
+
+Open a Command prompt
+
+    cd frontend
         npm install
-        npm run build --if-present
-        npm run test --if-present
+        npm start
 
-    - name: Upload artifact for deployment job
-      uses: actions/upload-artifact@v2
-      with:
-        name: node-app
-        path: .
+go to localhost:3000 on any Browser
 
-  deploy:
-    runs-on: windows-latest
-    needs: build
-    environment:
-      name: 'production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-
-    steps:
-    - name: Download artifact from build job
-      uses: actions/download-artifact@v2
-      with:
-        name: node-app
-
-    - name: 'Deploy to Azure Web App'
-      id: deploy-to-webapp
-      uses: azure/webapps-deploy@v2
-      with:
-        app-name: 'todoapp-demo'
-        slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_fa0cacabfa9d4971881780c4d5b30de4 }}
-        package: .
+Type the task, click on the "+" button on the left , it will add the task. You can mark completed by checking the checkbox of any task and can delete any task by pressing the delete icon of any task.

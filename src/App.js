@@ -13,6 +13,7 @@ class App extends React.Component {
     };
   }
   componentDidMount() {
+     {/* API Call to Backend  */}
     axios.get("https://mytodo-app.azurewebsites.net/api/").then((res) => {
       this.setState({
         tasks: res.data,
@@ -25,6 +26,8 @@ class App extends React.Component {
   submit(event, id) {
     console.log(id);
     event.preventDefault();
+   
+     {/* API Call to Backend  */}
     axios
       .post("https://mytodo-app.azurewebsites.net/api/", {
         task: this.state.task, //adding new task
@@ -36,6 +39,8 @@ class App extends React.Component {
   }
 
   delete(id) {
+    
+     {/* API Call to Backend  */}
     axios.delete("https://mytodo-app.azurewebsites.net/api/" + id).then(() => {
       this.componentDidMount(); //deleting a completed task
     });
@@ -43,6 +48,7 @@ class App extends React.Component {
 
   edit(id) {
     console.log(id)
+     {/* API Call to Backend  */}
     axios.put("https://mytodo-app.azurewebsites.net/api/" + id).then(() => {
       this.setState({
         status: "completed", //editing status of the task

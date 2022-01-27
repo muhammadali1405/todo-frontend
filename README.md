@@ -9,13 +9,10 @@ First of all Clone the project
 
     git clone https://github.com/muhammadali1405/todo-frontend.git
 
+
 then
 
-    cd todo-frontend
-
-Open a Command prompt
-
-    cd frontend
+        cd todo-frontend
         npm install
         npm start
 
